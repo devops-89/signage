@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div
-        className="h-auto md:h-[130vh] border-gray-700 mt-10 bg-cover text-center flex flex-col justify-between items-center py-10 px-4 md:px-0"
+        className="h-auto md:h-[80vh] border-gray-700 mt-10 bg-cover text-center flex flex-col justify-between items-center py-10 px-4 md:px-0"
         style={{
           backgroundImage:
             "url('https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b73defb9586e6bb732e37_footer-circle-bg.svg')",
@@ -52,12 +52,12 @@ const Footer = () => {
 
         <div className="w-full">
           <div className="flex justify-center items-center mb-4">
-            <img
+            {/* <img
               src={logo.src}
               alt="The Sign Group"
               className="w-[70px]  translate-y-[5px] md:-translate-y-[48px]"
-            />
-            {/* <p className="text-5xl mb-4">JassalSigns</p> */}
+            /> */}
+            <p className="text-5xl text-black tracking-wide font-semibold mb-4">JassalSigns</p>
           </div>
           <a
             href="/subscribe"
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <div className="flex justify-center space-x-4 mb-6">
             <a
-              href="https://www.linkedin.com/company/3134578"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +83,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/thesigngroup/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -93,8 +93,34 @@ const Footer = () => {
                 className="w-8 md:w-10"
               />
             </a>
+            {/* https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a87f26e0e091be1765423_twitter.svg */}
             <a
-              href="https://www.instagram.com/thesigngroup.co.uk/"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a87f26e0e091be1765423_twitter.svg "
+                alt="Facebook"
+                className="w-8 md:w-10"
+              />
+             
+            </a>
+           
+             <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a8817893404b7436c3aae_tiktok.svg"
+                alt="Facebook"
+                className="w-8 md:w-10"
+              />
+             
+            </a>
+            <a
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -110,11 +136,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 w-full px-6 md:w-[80%]">
           <p className="text-xs text-black text-center md:text-left mb-4 md:mb-0">
             Ⓒ Jassal Signs |{" "}
-            <a href="/terms-conditions" className="underline">
+            <a href="#" className="underline">
               Terms & Conditions
             </a>{" "}
             |{" "}
-            <a href="/privacy-policy" className="underline">
+            <a href="#" className="underline">
               Privacy Policy
             </a>
           </p>

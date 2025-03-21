@@ -106,10 +106,10 @@ const SignageLighting = () => {
         </div>
         <div className="flex justify-center items-center gap-[100px] mt-4 ">
           <div className="rounded-[40px] p-3 w-[200px] border-2">
-            <p className="font-bold">BRITISH COLUMBIA</p>
+            <p className="font-bold text-green-400">BRITISH COLUMBIA</p>
           </div>
           <div className="rounded-[40px] p-3 w-[200px] border-2">
-            <p className="font-bold">ALBERTA</p>
+            <p className="font-bold text-green-400">ALBERTA</p>
           </div>
         </div>
 
