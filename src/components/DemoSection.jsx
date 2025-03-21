@@ -34,10 +34,10 @@ const DemoSection = () => {
   };
 
   return (
-    <div className="h-[150vh] bg-black px-6  py-8 md:py-48 flex flex-col justify-center">
+    <div className="sm:h-[150vh] h-[50vh] bg-black px-6  py-8 md:py-48 flex flex-col justify-center">
       {/* Header */}
-      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white  mx-30 my-2">
-        <div className="w-4 md:w-5 text-green-500">
+      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white  sm:mx-30 mx-0 my-2">
+        <div className="w-4 md:w-5  text-green-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"

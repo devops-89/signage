@@ -81,10 +81,10 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <div className="bg-white h-[130vh] py-16 flex flex-col justify-center items-center ">
+    <div className="bg-white sm:h-[130vh] h-full py-16 flex flex-col justify-center items-center ">
       <div className="max-w-screen-xl w-full px-6">
-        <div className="flex  justify-between items-center">
-          <h2 className="text-3xl md:text-[8vh] w-[600px] font-semibold   mb-14">
+        <div className="sm:flex flex-col  justify-between items-center">
+          <h2 className="text-3xl md:text-[8vh] w-full sm:w-[600px] font-semibold   mb-14">
             What do you need for your next project?
           </h2>
 
