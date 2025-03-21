@@ -1,7 +1,11 @@
 import { useState } from "react";
 
 const DownloadBrochure = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", subscribe: true });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subscribe: true,
+  });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
@@ -21,24 +25,35 @@ const DownloadBrochure = () => {
   };
 
   return (
-    <div className="bg-black h-auto md:h-[80vh] flex justify-center items-center px-4">
-      <section className="bg-gray-800 text-white p-6 md:p-8 rounded-lg w-full md:w-[60%]">
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          <img
-            src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/6606d0d74b67beb46e075044_brochure.svg"
-            alt="Download Brochure"
-            className="w-20 h-20 md:w-16 md:h-16"
-          />
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold">Download our brochure</h3>
+    <div className="bg-black h-auto  flex justify-center items-center py-12 ">
+      <section className="bg-[#202020] h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] flex gap-20 relative ">
+        <img
+          src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/6606d0d74b67beb46e075044_brochure.svg"
+          alt="Download Brochure"
+          className="w-20 h-20 md:w-60 md:h-30 absolute top-[-80px] right-20"
+        />
+
+        <div className="text-center md:text-left  flex flex-col justify-between">
+          <div>
+            <h3 className="text-[7vh] font-semibold">Download our brochure</h3>
             <p>Fill in the form to access our brochure</p>
+          </div>
+          <div>
+            <img
+              src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632c7cbd0643ed7e4a890673_left-arrows.svg"
+              alt=""
+              id="flip"
+            />
           </div>
         </div>
 
         {!submitted ? (
-          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-            <div>
-              <label className="block text-sm mb-2">Name</label>
+          <form
+            className=" space-y-4 w-[50%] flex flex-col justify-center items-start  "
+            onSubmit={handleSubmit}
+          >
+            <div className="w-full">
+              <label className="block  mb-2 text-xl">Name</label>
               <input
                 type="text"
                 name="name"
@@ -48,8 +63,8 @@ const DownloadBrochure = () => {
                 required
               />
             </div>
-            <div>
-              <label className="block text-sm mb-2">Email Address</label>
+            <div className="w-full">
+              <label className="block  mb-2 text-xl">Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -69,10 +84,12 @@ const DownloadBrochure = () => {
               />
               <label className="text-sm">Subscribe to future updates</label>
             </div>
-            {error && <p className="text-red-500">Please fill in all fields.</p>}
+            {error && (
+              <p className="text-red-500">Please fill in all fields.</p>
+            )}
             <button
               type="submit"
-              className="w-full md:w-auto bg-blue-500 px-4 py-2 rounded text-white hover:bg-blue-600"
+              className="text-xl md:w-auto bg-white px-6 py-4 rounded-[3rem] text-black "
             >
               Submit
             </button>

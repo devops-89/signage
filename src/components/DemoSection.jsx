@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const DemoSection = () => {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0.2, 0.6], [0.8, 1.2]);
+  const scale = useTransform(scrollYProgress, [0.2, 0.3], [0.8, 1.2]);
 
   // State for cursor position
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -34,9 +34,9 @@ const DemoSection = () => {
   };
 
   return (
-    <div className="h-[150vh] bg-black px-6 md:px-48 py-16 md:py-48 flex flex-col justify-center">
+    <div className="h-[150vh] bg-black px-6  py-8 md:py-48 flex flex-col justify-center">
       {/* Header */}
-      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white py-4">
+      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white  mx-30 my-2">
         <div className="w-4 md:w-5 text-green-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const DemoSection = () => {
       {/* Video Section */}
       <motion.div
         style={{ scale }}
-        className="w-full flex justify-center items-center relative"
+        className="md:w-[70%] flex justify-center items-center  relative  my-14  mx-auto"
       >
         <div
           className="relative w-full overflow-hidden cursor-pointer"

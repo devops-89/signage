@@ -12,9 +12,9 @@ const SignageBrands = () => {
   }, []);
 
   return (
-    <div className="h-auto md:h-[100vh] flex flex-col md:flex-row items-center md:items-start bg-black text-white px-6 py-16 md:p-44">
+    <div className="h-auto md:[w-70%] md:h-[100vh] flex flex-col md:flex-row items-center md:items-start bg-black  text-white px-6 py-16 md:py-44 md:px-40">
       {/* Left Content */}
-      <div className="md:w-1/2 text-center md:text-left md:pr-8">
+      <div className="md:w-1/2 text-center md:text-left md:pr-8 ">
         <h2 className="text-4xl md:text-[8vh] font-semibold mb-4">
           All your signage needs covered
         </h2>

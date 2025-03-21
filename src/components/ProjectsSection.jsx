@@ -83,8 +83,8 @@ export default function ProjectsSection() {
   return (
     <div className="bg-white h-[130vh] py-16 flex flex-col justify-center items-center ">
       <div className="max-w-screen-xl w-full px-6">
-        <div className="flex justify-between items-center">
-          <h2 className="text-[6vh] w-[500px] font-semibold  mb-6">
+        <div className="flex  justify-between items-center">
+          <h2 className="text-3xl md:text-[6vh] w-[500px] font-semibold  mb-6">
             What do you need for your next project?
           </h2>
 
@@ -109,7 +109,17 @@ export default function ProjectsSection() {
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)} // store swiper instance
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={1}
+        breakpoints={{
+            640: {
+              slidesPerView: 2, // Tablets
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4, // Desktop
+              spaceBetween: 20,
+            },
+          }}
           className="w-full overflow-hidden"
           data-aos="fade-left"
         >

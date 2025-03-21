@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
 
       <div
-        className="h-auto md:h-[130vh] border-gray-700 mt-10 bg-cover text-center flex flex-col justify-between items-center py-10"
+        className="h-auto md:h-[130vh] border-gray-700 mt-10 bg-cover text-center flex flex-col justify-between items-center py-10 "
         style={{
           backgroundImage:
             "url('https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b73defb9586e6bb732e37_footer-circle-bg.svg')",
@@ -43,7 +43,7 @@ const Footer = () => {
       >
         <a
           href="/contact-us"
-          className="bg-white text-gray-900 py-2 px-6 rounded-full font-bold text-lg inline-block mb-6"
+          className="bg-white text-gray-900 py-2 px-6 rounded-full font-bold text-lg inline-block mb-6 -translate-y-[57px]"
         >
           Get in touch
         </a>
@@ -53,16 +53,16 @@ const Footer = () => {
             <img
               src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b6427c4b4a5f63e7ccf8f_TheSignGroup-logo.svg"
               alt="The Sign Group"
-              className="h-10 md:h-12"
+              className="md:w-xs -translate-y-[48px]"
             />
           </div>
           <a
             href="/subscribe"
-            className="bg-yellow-500 text-gray-900 py-2 px-6 rounded-full font-bold text-lg inline-block mb-4"
+            className="bg-black text-white py-2 px-6 rounded-full font-semibold text-lg inline-block mb-4"
           >
             Subscribe for updates
           </a>
-          <p className="text-sm mb-4">
+          <p className=" text-black text-xl mb-4">
             We are the number 1 for bespoke trade signs. <br /> Follow us to
             find out why!
           </p>
@@ -76,7 +76,7 @@ const Footer = () => {
               <img
                 src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a880e39b40cb456deed9e_linkedin.svg"
                 alt="LinkedIn"
-                className="h-6"
+                className="w-10"
               />
             </a>
             <a
@@ -87,7 +87,7 @@ const Footer = () => {
               <img
                 src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a8807a7ac13ee24a24ce9_facebook.svg"
                 alt="Facebook"
-                className="h-6"
+                className="w-10"
               />
             </a>
             <a
@@ -98,7 +98,7 @@ const Footer = () => {
               <img
                 src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b3b33870a7a47dad8479a_insta.svg"
                 alt="Instagram"
-                className="h-6"
+                className="w-10"
               />
             </a>
           </div>

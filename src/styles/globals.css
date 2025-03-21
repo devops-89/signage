@@ -3,3 +3,13 @@
 body{
     overflow-x: hidden;
 }
+#flip {
+    transform: scaleX(-1); /* Flip the image permanently */
+    animation: custom-translate 1.5s ease-in-out infinite;
+}
+
+@keyframes custom-translate {
+    0%, 100% { transform: scaleX(-1) translateX(0); } /* Keep flipped */
+    50% { transform: scaleX(-1) translateX(-15px); } /* Moves left */
+    75% { transform: scaleX(-1) translateX(15px); }  /* Moves right */
+}
