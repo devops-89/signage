@@ -1,0 +1,19 @@
+.rotate-10deg {
+    animation: custom-spin 1.5s ease-in-out infinite;
+}
+
+@keyframes custom-spin {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); } 
+}
+
+.move-x {
+    animation: custom-translate 1.5s ease-in-out infinite;
+}
+
+@keyframes custom-translate {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-15px); } /* Moves left */
+    75% { transform: translateX(15px); }  /* Moves right */
+}

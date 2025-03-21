@@ -2,6 +2,9 @@ import React, { useRef } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GrPrevious } from "react-icons/gr";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import { GrNext } from "react-icons/gr";
 
@@ -12,6 +15,16 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default function ProjectsSection() {
+
+   useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        image: true,
+      });
+    }, []);
+  
+
   // ref for controlling swiper
   const swiperRef = useRef(null);
 
@@ -98,6 +111,7 @@ export default function ProjectsSection() {
           spaceBetween={20}
           slidesPerView={4}
           className="w-full overflow-hidden"
+          data-aos="fade-left"
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>

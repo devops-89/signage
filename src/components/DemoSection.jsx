@@ -1,25 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const DemoSection = () => {
- 
   const { scrollYProgress } = useScroll();
-
-  
   const scale = useTransform(scrollYProgress, [0.2, 0.6], [0.8, 1.2]);
 
   // State for cursor position
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const cursorSize = 160; 
+  const [isMobile, setIsMobile] = useState(false);
+  const cursorSize = 160;
 
-  // Function to update cursor position with boundary checks
+  // Detect if the user is on mobile
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Function to update cursor position
   const handleMouseMove = (e) => {
+    if (isMobile) return; // Disable effect on mobile
     const rect = e.currentTarget.getBoundingClientRect();
     let x = e.clientX - rect.left;
     let y = e.clientY - rect.top;
 
-    // Ensure cursor stays within the video bounds
+    // Ensure cursor stays within video bounds
     x = Math.max(cursorSize / 2, Math.min(x, rect.width - cursorSize / 2));
     y = Math.max(cursorSize / 2, Math.min(y, rect.height - cursorSize / 2));
 
@@ -27,10 +34,10 @@ const DemoSection = () => {
   };
 
   return (
-    <div className="h-[150vh] bg-black p-48 flex flex-col justify-center">
+    <div className="h-[150vh] bg-black px-6 md:px-48 py-16 md:py-48 flex flex-col justify-center">
       {/* Header */}
-      <div className="flex items-center text-[20px] gap-3 text-white py-4">
-        <div className="w-5 text-green-500">
+      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white py-4">
+        <div className="w-4 md:w-5 text-green-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -48,17 +55,16 @@ const DemoSection = () => {
         Take a look around
       </div>
 
-      
+      {/* Video Section */}
       <motion.div
-        style={{ scale }} 
+        style={{ scale }}
         className="w-full flex justify-center items-center relative"
       >
-        {/* Video Container */}
         <div
-          className="relative w-full  overflow-hidden cursor-pointer"
+          className="relative w-full overflow-hidden cursor-pointer"
           onMouseMove={handleMouseMove}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
+          onMouseEnter={() => !isMobile && setIsHovering(true)}
+          onMouseLeave={() => !isMobile && setIsHovering(false)}
         >
           {/* Video */}
           <video
@@ -66,20 +72,20 @@ const DemoSection = () => {
             autoPlay
             loop
             muted
-            className="w-full shadow-lg"
+            className="w-full h-[200px] md:h-auto shadow-lg"
           />
 
-         
-          {isHovering && (
+          {/* Custom Cursor (Hidden on Mobile) */}
+          {!isMobile && isHovering && (
             <motion.div
-              className="absolute flex items-center justify-center border border-white text-white text-4xl font-semibold uppercase pointer-events-none"
+              className="absolute flex items-center justify-center border border-white text-white text-xl md:text-4xl font-semibold uppercase pointer-events-none"
               style={{
                 width: `${cursorSize}px`,
                 height: `${cursorSize}px`,
                 borderRadius: "50%",
-                backgroundColor: "rgba(255, 255, 255, 0.1)", 
-                backdropFilter: "blur(5px)", 
-                top: cursorPos.y - cursorSize / 2, 
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(5px)",
+                top: cursorPos.y - cursorSize / 2,
                 left: cursorPos.x - cursorSize / 2,
               }}
               animate={{
