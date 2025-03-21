@@ -21,6 +21,9 @@ export default function ProjectsSection() {
         duration: 1000,
         easing: "ease-in-out",
         image: true,
+        disable: function () {
+          return window.innerWidth < 768;
+        }
       });
     }, []);
   
