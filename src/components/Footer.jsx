@@ -1,5 +1,5 @@
 import styles from "@/styles/Footer.module.css";
-
+import logo from "@/homepage/logo.png";
 const Footer = () => {
   return (
     <footer className="bg-black text-white pt-[120px]">
@@ -21,7 +21,9 @@ const Footer = () => {
           />
           <div className="flex flex-col md:flex-row justify-center items-center text-center gap-2 md:gap-0">
             <div className="text-4xl md:text-[15vh] font-semibold">Work</div>
-            <div className={`text-2xl md:text-[8vh] flex justify-center items-center font-semibold italic ${styles.rotate10deg} border-2 border-green-500 rounded-[3rem] px-4 py-2 md:px-10`}>
+            <div
+              className={`text-2xl md:text-[8vh] flex justify-center items-center font-semibold italic ${styles.rotate10deg} border-2 border-green-500 rounded-[3rem] px-4 py-2 md:px-10`}
+            >
               with
             </div>
             <div className="text-4xl md:text-[15vh] font-semibold">Us</div>
@@ -51,9 +53,9 @@ const Footer = () => {
         <div className="w-full">
           <div className="flex justify-center items-center mb-4">
             <img
-              src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b6427c4b4a5f63e7ccf8f_TheSignGroup-logo.svg"
+              src={logo.src}
               alt="The Sign Group"
-              className="w-32 md:w-auto -translate-y-[30px] md:-translate-y-[48px]"
+              className="w-[70px]  translate-y-[30px] md:-translate-y-[48px]"
             />
           </div>
           <a
@@ -63,27 +65,61 @@ const Footer = () => {
             Subscribe for updates
           </a>
           <p className="text-black text-base md:text-xl mb-4">
-            We are the number 1 for bespoke trade signs. <br /> Follow us to find out why!
+            We are the number 1 for bespoke trade signs. <br /> Follow us to
+            find out why!
           </p>
 
           <div className="flex justify-center space-x-4 mb-6">
-            <a href="https://www.linkedin.com/company/3134578" target="_blank" rel="noopener noreferrer">
-              <img src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a880e39b40cb456deed9e_linkedin.svg" alt="LinkedIn" className="w-8 md:w-10" />
+            <a
+              href="https://www.linkedin.com/company/3134578"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a880e39b40cb456deed9e_linkedin.svg"
+                alt="LinkedIn"
+                className="w-8 md:w-10"
+              />
             </a>
-            <a href="https://www.facebook.com/thesigngroup/" target="_blank" rel="noopener noreferrer">
-              <img src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a8807a7ac13ee24a24ce9_facebook.svg" alt="Facebook" className="w-8 md:w-10" />
+            <a
+              href="https://www.facebook.com/thesigngroup/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/636a8807a7ac13ee24a24ce9_facebook.svg"
+                alt="Facebook"
+                className="w-8 md:w-10"
+              />
             </a>
-            <a href="https://www.instagram.com/thesigngroup.co.uk/" target="_blank" rel="noopener noreferrer">
-              <img src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b3b33870a7a47dad8479a_insta.svg" alt="Instagram" className="w-8 md:w-10" />
+            <a
+              href="https://www.instagram.com/thesigngroup.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b3b33870a7a47dad8479a_insta.svg"
+                alt="Instagram"
+                className="w-8 md:w-10"
+              />
             </a>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 w-full px-6 md:w-[80%]">
           <p className="text-xs text-black text-center md:text-left mb-4 md:mb-0">
-            Ⓒ The Sign Group | <a href="/terms-conditions" className="underline">Terms & Conditions</a> | <a href="/privacy-policy" className="underline">Privacy Policy</a>
+            Ⓒ Jassal Signs |{" "}
+            <a href="/terms-conditions" className="underline">
+              Terms & Conditions
+            </a>{" "}
+            |{" "}
+            <a href="/privacy-policy" className="underline">
+              Privacy Policy
+            </a>
           </p>
-          <button className="bg-black rounded-[3rem] px-6 py-2 text-white">site by Yellow</button>
+          <button className="bg-black rounded-[3rem] px-6 py-2 text-white">
+            site by Yellow
+          </button>
         </div>
       </div>
     </footer>

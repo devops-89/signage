@@ -4,7 +4,7 @@ import SignageLighting from "./SignageLighting";
 
 const HeloSection = () => {
   return (
-    <div className="bg-black text-white h-[100vh] sm:h-[110vh] flex items-center ">
+    <div className="bg-black text-white h-[110vh] sm:h-[120vh] flex items-center ">
       {/* signage box */}
       <SignageLighting />
       {/* bottom text */}
