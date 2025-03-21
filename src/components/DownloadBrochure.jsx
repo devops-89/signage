@@ -26,7 +26,7 @@ const DownloadBrochure = () => {
 
   return (
     <div className="bg-black h-auto  flex justify-center items-center py-15 ">
-      <section className="bg-[#202020] h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] flex gap-20 relative ">
+      <section className="bg-[#202020] h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] sm:flex flex-col gap-20 relative  ">
         <img
           src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/6606d0d74b67beb46e075044_brochure.svg"
           alt="Download Brochure"
@@ -35,7 +35,9 @@ const DownloadBrochure = () => {
 
         <div className="text-center md:text-left  flex flex-col justify-between">
           <div>
-            <h3 className="text-[7vh] font-semibold">Download our brochure</h3>
+            <h3 className=" sm:text-[7vh] text-[3vh] font-semibold">
+              Download our brochure
+            </h3>
             <p>Fill in the form to access our brochure</p>
           </div>
           <div>
@@ -43,13 +45,14 @@ const DownloadBrochure = () => {
               src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632c7cbd0643ed7e4a890673_left-arrows.svg"
               alt=""
               id="flip"
+              className="w-[50px]"
             />
           </div>
         </div>
 
         {!submitted ? (
           <form
-            className=" space-y-4 w-[50%] flex flex-col justify-center items-start  "
+            className="space-y-4 sm:w-[50%] w-full flex flex-col justify-center items-start"
             onSubmit={handleSubmit}
           >
             <div className="w-full">
@@ -89,7 +92,7 @@ const DownloadBrochure = () => {
             )}
             <button
               type="submit"
-              className="text-xl md:w-auto bg-white px-6 py-4 rounded-[3rem] text-black "
+              className="text-xl md:w-auto bg-white px-6 py-4 rounded-[3rem] text-black w-full "
             >
               Submit
             </button>
