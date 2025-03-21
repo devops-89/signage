@@ -1,7 +1,9 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import client1 from "@/homepage/projects/client-1.png";
+import client2 from "@/homepage/projects/client-2.png";
+import client3 from "@/homepage/projects/client-3.png";
 const SignageBrands = () => {
   useEffect(() => {
     AOS.init({
@@ -51,7 +53,7 @@ const SignageBrands = () => {
         >
           {/* Main Logo */}
           <img
-            src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/63468b8f27d327d8f31a96df_logo-large.svg"
+            src={client1.src}
             alt="The Sign Group"
             className="w-40 md:w-60 opacity-100 transform transition duration-300"
           />
@@ -59,12 +61,12 @@ const SignageBrands = () => {
           {/* Sub Logos */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-6">
             <img
-              src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b86f5952b60b2a477740d_logo-neonplus.svg"
+              src={client2.src}
               alt="Neonplus"
               className="w-40 md:w-60 opacity-100 transform transition duration-300"
             />
             <img
-              src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b87414761721a8cfb2832_weloveleds.webp"
+              src={client3.src}
               alt="We Love LEDs"
               className="w-40 md:w-60 opacity-100 transform transition duration-300"
             />

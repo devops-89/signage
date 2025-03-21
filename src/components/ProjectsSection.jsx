@@ -13,20 +13,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
+import project1 from "@/homepage/projects/project-1.jpeg";
+import project2 from "@/homepage/projects/project-2.jpeg";
+import project3 from "@/homepage/projects/project-3.jpeg";
+import project4 from "@/homepage/projects/project-4.jpeg";
+import project5 from "@/homepage/projects/project-5.jpeg";
+import project6 from "@/homepage/projects/project-6.jpeg";
+import project7 from "@/homepage/projects/project-7.jpeg";
+import Image from "next/image";
 export default function ProjectsSection() {
-
-   useEffect(() => {
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        image: true,
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      image: true,
         disable: function () {
           return window.innerWidth < 768;
         }
-      });
-    }, []);
-  
+    });
+  }, []);
 
   // ref for controlling swiper
   const swiperRef = useRef(null);
@@ -34,51 +39,44 @@ export default function ProjectsSection() {
   const slides = [
     {
       id: 1,
-      title: "Neonplus®",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/63766916e8261aa49e2016e9_neonplus-min.jpg",
-      link: "https://www.thesigngroup.co.uk/services/faux-neon-neonplus",
+      title: "Choice of India",
+      image: project1,
+      // link: "https://www.thesigngroup.co.uk/services/faux-neon-neonplus",
     },
     {
       id: 2,
-      title: "Neon Flex Signs",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/637668e3766d5ea0bb712296_neonflex-min.jpg",
-      link: "https://www.thesigngroup.co.uk/services/neon-flex/",
+      title: "Namaste India",
+      image: project2,
+      // link: "https://www.thesigngroup.co.uk/services/neon-flex/",
     },
     {
       id: 3,
-      title: "Flat Cut Lettering & Shapes",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/637668de6beb8c2551a8f218_flatcut-min.jpg",
-      link: "http://www.thesigngroup.co.uk/services/flat-cuts",
+      title: "The Brokin Yolk",
+      image: project3,
+      // link: "http://www.thesigngroup.co.uk/services/flat-cuts",
     },
     {
       id: 4,
-      title: "Built Ups",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/6376690f49a2488f46f4bbbd_Builtups-min.jpg",
-      link: "https://www.thesigngroup.co.uk/services/built-ups",
+      title: "Tamarak Medical Clinic",
+      image: project4,
+      // link: "https://www.thesigngroup.co.uk/services/built-ups",
     },
     {
       id: 5,
-      title: "Built Ups",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/6376690f49a2488f46f4bbbd_Builtups-min.jpg",
-      link: "https://www.thesigngroup.co.uk/services/built-ups",
+      title: "Subway",
+      image: project5,
+      // link: "https://www.thesigngroup.co.uk/services/built-ups",
     },
     {
       id: 6,
-      title: "Built Ups",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/6376690f49a2488f46f4bbbd_Builtups-min.jpg",
+      title: "Olympia Liquor",
+      image: project6,
       link: "https://www.thesigngroup.co.uk/services/built-ups",
     },
     {
       id: 7,
-      title: "Built Ups",
-      image:
-        "https://cdn.prod.website-files.com/632c50bab8d5966c3b4acd07/6376690f49a2488f46f4bbbd_Builtups-min.jpg",
+      title: "Buck Or Two Plus",
+      image: project7,
       link: "https://www.thesigngroup.co.uk/services/built-ups",
     },
   ];
@@ -113,7 +111,7 @@ export default function ProjectsSection() {
           onSwiper={(swiper) => (swiperRef.current = swiper)} // store swiper instance
           spaceBetween={20}
           slidesPerView={1}
-        breakpoints={{
+          breakpoints={{
             640: {
               slidesPerView: 2, // Tablets
               spaceBetween: 20,
@@ -134,7 +132,7 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
                 className="block   overflow-hidden shadow-lg"
               >
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.title}
                   className="w-full h-80 object-cover"
