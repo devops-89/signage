@@ -6,8 +6,8 @@ const Navbar = () => {
       <nav className="w-full text-white shadow-md p-4 flex justify-between items-center pt-5 absolute">
         {/* svg start */}
         <div className="flex items-center">
-          <a href="/" aria-label="home" className="relative flex items-center w-full">
-           Jassal Signs
+          <a href="/" aria-label="home" className="relative text-4xl flex items-center w-full">
+           <span className="text-red-600">Jassal</span> Signs
           </a>
         </div>
         {/* svg end */}
