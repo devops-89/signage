@@ -43,6 +43,7 @@ const DownloadBrochure = () => {
               src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632c7cbd0643ed7e4a890673_left-arrows.svg"
               alt=""
               id="flip"
+              className="w-[50px]"
             />
           </div>
         </div>
