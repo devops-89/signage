@@ -114,11 +114,11 @@ const SignageLighting = () => {
         </div>
 
         {/* Description */}
-        <div className="flex justify-center md:justify-end md:pr-14">
+        {/* <div className="flex justify-center md:justify-end md:pr-14">
           <p className="w-full sm:w-3/4 md:w-80 text-lg sm:text-xl text-center md:text-right px-4">
             Get High-Quality Signs That Look Great and Help You Generate Leads
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

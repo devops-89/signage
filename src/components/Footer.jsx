@@ -57,6 +57,7 @@ const Footer = () => {
               alt="The Sign Group"
               className="w-[70px]  translate-y-[5px] md:-translate-y-[48px]"
             />
+            {/* <p className="text-5xl mb-4">JassalSigns</p> */}
           </div>
           <a
             href="/subscribe"
@@ -118,7 +119,7 @@ const Footer = () => {
             </a>
           </p>
           <button className="bg-black rounded-[3rem] px-6 py-2 text-white">
-            site by DIGIXITO
+            Site by BookMyAd.ca
           </button>
         </div>
       </div>

@@ -13,8 +13,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import project1 from "@/homepage/projects/project-1.jpeg";
-import project2 from "@/homepage/projects/project-2.jpeg";
+import project1 from "@/homepage/projects/project-8.jpeg";
+import project2 from "@/homepage/projects/project-9.jpeg";
 import project3 from "@/homepage/projects/project-3.jpeg";
 import project4 from "@/homepage/projects/project-4.jpeg";
 import project5 from "@/homepage/projects/project-5.jpeg";
@@ -27,9 +27,9 @@ export default function ProjectsSection() {
       duration: 1000,
       easing: "ease-in-out",
       image: true,
-        disable: function () {
-          return window.innerWidth < 768;
-        }
+      disable: function () {
+        return window.innerWidth < 768;
+      },
     });
   }, []);
 
@@ -39,13 +39,13 @@ export default function ProjectsSection() {
   const slides = [
     {
       id: 1,
-      title: "Choice of India",
+      title: "SuperClips",
       image: project1,
       // link: "https://www.thesigngroup.co.uk/services/faux-neon-neonplus",
     },
     {
       id: 2,
-      title: "Namaste India",
+      title: "Kumon",
       image: project2,
       // link: "https://www.thesigngroup.co.uk/services/neon-flex/",
     },

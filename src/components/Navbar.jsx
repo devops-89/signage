@@ -8,7 +8,8 @@ const Navbar = () => {
         {/* svg start */}
         <div className="flex items-center">
           <a href="#" aria-label="home" className="relative text-4xl flex items-center w-full">
-          <img src={logo.src} alt="logo" className="w-[30px]" /> <span className="text-red-600">Jassal</span> Signs
+          {/* <img src={logo.src} alt="logo" className="w-[30px]" />  */}
+          <span className="text-WHITE-600">Jassal</span> Signs
           </a>
         </div>
         {/* svg end */}
