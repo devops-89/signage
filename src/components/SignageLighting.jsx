@@ -14,7 +14,7 @@ const SignageLighting = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8 text-white">
+    <div className="container mx-auto px-4  md:py-8 text-white">
       <div className="text-center space-y-6 pt-10 sm:pt-16">
         {/* First Line */}
         <div
@@ -104,11 +104,11 @@ const SignageLighting = () => {
             className="w-auto h-[4vh] sm:h-[10vh] md:h-[13vh]"
           />
         </div>
-        <div className="flex justify-center items-center gap-[100px] mt-4 ">
-          <div className="rounded-[40px] p-3 w-[200px] border-2">
+        <div className="flex flex-col md:flex-row gap-2 justify-center  md:gap-[100px] mt-12 md:mt-4  ">
+          <div className="rounded-[3rem] p-3  md:w-[200px] border-2 h-[7vh] sm:h-[10vh] md:h-[13vh] flex justify-center my-4 items-center">
             <p className="font-bold text-green-400">BRITISH COLUMBIA</p>
           </div>
-          <div className="rounded-[40px] p-3 w-[200px] border-2">
+          <div className="rounded-[3rem] p-3 md:w-[200px] border-2 h-[7vh] sm:h-[10vh] md:h-[13vh] my-4 flex justify-center items-center">
             <p className="font-bold text-green-400">ALBERTA</p>
           </div>
         </div>
