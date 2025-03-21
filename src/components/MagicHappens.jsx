@@ -12,7 +12,7 @@ const MagicHappens = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white py-16 md:px-[40px] md:py-60">
+    <section className="bg-black text-white py-16 md:px-[40px] md:py-60 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col md:flex-row items-start gap-10">
           {/* Left Content */}

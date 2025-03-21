@@ -34,10 +34,10 @@ const DemoSection = () => {
   };
 
   return (
-    <div className="h-[150vh] bg-black px-6  py-8 md:py-48 flex flex-col justify-center">
+    <div className="h-[60vh] md:h-[150vh]  bg-black px-6  py-8 md:py-48 flex flex-col justify-center">
       {/* Header */}
-      <div className="flex items-center text-lg md:text-[20px] gap-3 text-white  mx-30 my-2">
-        <div className="w-4 md:w-5 text-green-500">
+      <div className="w-[200px] flex items-center text-lg md:text-[20px] gap-3 text-white  md:mx-30 my-1 md:my-2">
+        <div className="w-5 md:w-5 text-green-500 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -58,7 +58,7 @@ const DemoSection = () => {
       {/* Video Section */}
       <motion.div
         style={{ scale }}
-        className="md:w-[70%] flex justify-center items-center  relative  my-14  mx-auto"
+        className="w-[80%] md:w-[70%] flex justify-center items-center  relative my-3 md:my-14  mx-auto"
       >
         <div
           className="relative w-full overflow-hidden cursor-pointer"
@@ -78,7 +78,7 @@ const DemoSection = () => {
           {/* Custom Cursor (Hidden on Mobile) */}
           {!isMobile && isHovering && (
             <motion.div
-              className="absolute flex items-center justify-center border border-white text-white text-xl md:text-4xl font-semibold uppercase pointer-events-none"
+              className="absolute flex items-center justify-center text-white text-xl md:text-4xl font-semibold uppercase pointer-events-none"
               style={{
                 width: `${cursorSize}px`,
                 height: `${cursorSize}px`,

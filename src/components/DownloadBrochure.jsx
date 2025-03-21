@@ -25,20 +25,20 @@ const DownloadBrochure = () => {
   };
 
   return (
-    <div className="bg-black h-auto  flex justify-center items-center py-15 ">
-      <section className="bg-[#202020] h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] flex gap-20 relative ">
+    <div className="bg-black h-auto flex justify-center items-center py-10 px-4 md:px-0">
+      <section className="bg-[#202020] h-auto md:h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] flex flex-col md:flex-row gap-10 md:gap-20 relative ">
         <img
           src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/6606d0d74b67beb46e075044_brochure.svg"
           alt="Download Brochure"
-          className="w-20 h-20 md:w-60 md:h-30 absolute top-[-80px] right-20"
+          className="w-16 h-16 md:w-60 md:h-30 absolute top-[-50px] md:top-[-80px] right-10 md:right-20"
         />
 
-        <div className="text-center md:text-left  flex flex-col justify-between">
+        <div className="text-center md:text-left flex flex-col justify-between gap-6 md:gap-0">
           <div>
-            <h3 className="text-[7vh] font-semibold">Download our brochure</h3>
+            <h3 className="text-3xl md:text-[7vh] font-semibold">Download our brochure</h3>
             <p>Fill in the form to access our brochure</p>
           </div>
-          <div>
+          <div className="hidden md:block">
             <img
               src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632c7cbd0643ed7e4a890673_left-arrows.svg"
               alt=""
@@ -49,11 +49,11 @@ const DownloadBrochure = () => {
 
         {!submitted ? (
           <form
-            className=" space-y-4 w-[50%] flex flex-col justify-center items-start  "
+            className="space-y-4 w-full md:w-[50%] flex flex-col justify-center items-start"
             onSubmit={handleSubmit}
           >
             <div className="w-full">
-              <label className="block  mb-2 text-xl">Name</label>
+              <label className="block mb-2 text-lg">Name</label>
               <input
                 type="text"
                 name="name"
@@ -64,7 +64,7 @@ const DownloadBrochure = () => {
               />
             </div>
             <div className="w-full">
-              <label className="block  mb-2 text-xl">Email Address</label>
+              <label className="block mb-2 text-lg">Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -89,7 +89,7 @@ const DownloadBrochure = () => {
             )}
             <button
               type="submit"
-              className="text-xl md:w-auto bg-white px-6 py-4 rounded-[3rem] text-black "
+              className="text-lg md:text-xl md:w-auto bg-white px-6 py-3 md:py-4 rounded-[3rem] text-black"
             >
               Submit
             </button>
