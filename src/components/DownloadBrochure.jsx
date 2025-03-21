@@ -25,7 +25,7 @@ const DownloadBrochure = () => {
   };
 
   return (
-    <div className="bg-black h-auto  flex justify-center items-center py-12 ">
+    <div className="bg-black h-auto  flex justify-center items-center py-15 ">
       <section className="bg-[#202020] h-[70vh] text-white p-6 md:py-12 rounded-lg w-full md:w-[84%] flex gap-20 relative ">
         <img
           src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/6606d0d74b67beb46e075044_brochure.svg"

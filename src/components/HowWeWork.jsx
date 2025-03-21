@@ -26,7 +26,7 @@ const HowWeWork = () => {
           </p>
           <a
             href="/company/how-we-work"
-            className="inline-block bg-black text-white py-3 px-6 rounded-lg shadow-md hover:bg-gray-800 transition"
+            className="inline-block bg-transparent  py-3 px-6 rounded-[3rem] border-2 border-[#D0E89B] text-xl transition"
           >
             See how we work
           </a>

@@ -12,7 +12,7 @@ const MagicHappens = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white py-16 md:px-[40px] md:py-30">
+    <section className="bg-black text-white py-16 md:px-[40px] md:py-60">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col md:flex-row items-start gap-10">
           {/* Left Content */}
@@ -38,7 +38,7 @@ const MagicHappens = () => {
             </p>
             <a
               href="/company/our-workshop"
-              className="inline-block w-full md:w-[220px] bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition"
+              className="inline-block w-full md:w-[300px]  text-white py-3 px-6 rounded-[3rem] border-2 border-[#5C631F] shadow-md text-2xl transition"
             >
               Explore the workshop
             </a>

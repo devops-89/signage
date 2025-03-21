@@ -2,7 +2,7 @@ import styles from "@/styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white pt-[120px]">
       <div className="container mx-auto flex flex-col justify-center items-center px-5">
         <p className="w-full md:w-[30%] leading-7 text-center text-lg md:text-xl mb-6">
           We’re always looking to work with creative businesses, so if you’re

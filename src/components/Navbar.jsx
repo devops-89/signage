@@ -1,12 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 
 const Navbar = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <section className="relative">
     <nav className="w-full text-white shadow-md p-4 flex justify-between flex-start pt-5 absolute ">
-      <a href="/" className="flex items-center" aria-label="home">
-        <div className="w-30 ">
-          <svg
+     
+{/* svg start */}
+
+<div
+      className="relative  flex items-center "
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <a href="/" aria-label="home" className="relative flex items-center w-full">
+        {!isHovered && (
+          <div className="w-30">
+              <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
             viewBox="0 0 101.255 88.425"
@@ -42,8 +52,18 @@ const Navbar = () => {
               ></path>
             </g>
           </svg>
-        </div>
+          </div>
+        )}
+        {isHovered && (
+          <div className=" w-full h-full flex items-center justify-center">
+            <span className="text-lg font-bold">THE SIGN GROUP</span>
+          </div>
+        )}
       </a>
+    </div>
+{/* svg end */}
+
+
       <div className="hidden md:flex space-x-6 text-[18px]">
         <a href="#" >
           Company
