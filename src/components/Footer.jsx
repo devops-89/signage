@@ -1,4 +1,4 @@
-import "./Footer.css";
+import styles from "@/styles/Footer.module.css";
 
 const Footer = () => {
   return (
@@ -12,23 +12,23 @@ const Footer = () => {
           <img
             src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b3ff923a3ab07e281543e_pointer.svg"
             alt="Pointer"
-            className="h-10 hidden md:block move-x mx-5"
+            className={`h-10 hidden md:block ${styles.movex} mx-5`}
           />
           <img
             src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b3ff93cf243879e99f624_yellow-arrow.svg"
             alt="Pointer"
-            className="h-8 hidden md:block rotate-10deg mx-5"
+            className={`h-8 hidden md:block ${styles.rotate10deg} mx-5`}
           />
           <div className="flex flex-col md:flex-row justify-center items-center text-center">
             <div className="text-5xl md:text-[15vh] font-semibold">Work</div>
-            <div className="text-3xl md:text-[8vh] flex justify-center items-center font-semibold italic rotate-10deg border-2 border-green-500 rounded-[3rem] px-6 py-2 md:px-10">
+            <div className={`text-3xl md:text-[8vh] flex justify-center items-center font-semibold italic ${styles.rotate10deg} border-2 border-green-500 rounded-[3rem] px-6 py-2 md:px-10`}>
               with
             </div>
             <div className="text-5xl md:text-[15vh] font-semibold">Us</div>
             <img
               src="https://cdn.prod.website-files.com/632ae9e32fb1911d980d3b01/632b401d7b08c7087217c905_two-arrows.svg"
               alt="Pointer"
-              className="h-12 md:h-20 hidden md:block move-x mx-5"
+              className={`h-12 md:h-20 hidden md:block ${styles.movex} mx-5`}
             />
           </div>
         </div>
