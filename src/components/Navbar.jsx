@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "@/../public/images/homepage/logo.png";
 
 const Navbar = () => {
   return (
@@ -6,8 +7,8 @@ const Navbar = () => {
       <nav className="w-full text-white shadow-md p-4 flex justify-between items-center pt-5 absolute">
         {/* svg start */}
         <div className="flex items-center">
-          <a href="/" aria-label="home" className="relative text-4xl flex items-center w-full">
-           <span className="text-red-600">Jassal</span> Signs
+          <a href="#" aria-label="home" className="relative text-4xl flex items-center w-full">
+          <img src={logo.src} alt="logo" className="w-[30px]" /> <span className="text-red-600">Jassal</span> Signs
           </a>
         </div>
         {/* svg end */}
